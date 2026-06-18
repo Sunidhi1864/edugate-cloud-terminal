@@ -109,3 +109,35 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+/* 1. Target devices smaller than 768px (Tablets/Phones) */
+@media (max-width: 768px) {
+  
+  /* Make the main root container full width with a little padding */
+  #root {
+    width: 100% !important;
+    padding: 0 15px !important;
+    border-inline: none !important; /* Remove side borders on mobile */
+  }
+
+  /* Shrink headings so they don't break the layout */
+  h1 {
+    font-size: 32px !important;
+    margin: 15px 0 !important;
+  }
+}
+
+/* 2. Target even smaller devices (Phones like iPhone/Pixel) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px !important;
+  }
+  
+  /* If you have buttons or inputs, make them easier to tap */
+  button, input {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 12px !important;
+  }
+}
